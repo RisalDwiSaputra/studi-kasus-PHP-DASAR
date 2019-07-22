@@ -51,7 +51,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
             echo "
             <script>
                 alert('Data Gagal Diubah? Periksa Data Anda!');
-                document.location.href = 'registrasi.php';
+                document.location.href = 'registrasi1.php';
             </script>
             ";
       }
@@ -77,7 +77,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
     }else{
       // Jika Gagal, Lakukan :
       echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
-      echo "<br><a href='registrasi.php'>Kembali Ke Form</a>";
+      echo "<br><a href='registrasi1.php'>Kembali Ke Form</a>";
     }
 }
 

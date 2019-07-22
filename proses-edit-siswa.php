@@ -41,7 +41,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
             echo "
                 <script>
                     alert('Data Berhasil Diubah');
-                    document.location.href = 'siswa.php';
+                    document.location.href = 'siswa2.php';
                 </script>
             ";
       }else{
@@ -59,7 +59,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
         echo "
         <script>
             alert('Gambar Gagal Diupload? Perikasi File Anda!');
-            document.location.href = 'siswa.php';
+            document.location.href = 'edit-siswa.php';
         </script>
         ";
     }
@@ -71,7 +71,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
     
     if($sql){ // Cek jika proses simpan ke database sukses atau tidak
       // Jika Sukses, Lakukan :
-      header("location: siswa.php"); // Redirect ke halaman index.php
+      header("location: siswa2.php"); // Redirect ke halaman index.php
     }else{
       // Jika Gagal, Lakukan :
       echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";

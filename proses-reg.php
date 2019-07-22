@@ -28,11 +28,12 @@ if(isset($_POST['daftar'])){
     $nomer_telfon = $_POST['nomer_telfon'];
     $alamat = $_POST['alamat'];
     $email = $_POST['email'];
+    $user = $_POST['user'];
 
     // Proses upload
     if(move_uploaded_file($tmp, $path)){ // Cek apakah gambar berhasil diupload atau tidak
         // Proses simpan ke Database
-        $sql = "INSERT INTO admin (username, password, upload, nama, nomer_telfon, alamat, email) VALUE ('$username', '$password','$fotobaru', '$nama', '$nomer_telfon', '$alamat','$email')";
+        $sql = "INSERT INTO admin (username, password, upload, nama, nomer_telfon, alamat, email, user) VALUE ('$username', '$password','$fotobaru', '$nama', '$nomer_telfon', '$alamat','$email', '$user')";
         $query = mysqli_query($db, $sql); // Eksekusi/ Jalankan query dari variabel $query
             if( $query ) {
                 echo "
@@ -47,7 +48,7 @@ if(isset($_POST['daftar'])){
                 echo "
                 <script>
                     alert('Data GAGAL Disimpan');
-                    document.location.href = 'registrasi.php';
+                    document.location.href = 'registrasi1.php';
                 </script>
                 ";
             // kalau gagal alihkan ke halaman indek.php dengan status=gagal
@@ -58,7 +59,7 @@ if(isset($_POST['daftar'])){
         echo "
         <script>
             alert('FILE GAGAL DI UPLOAD');
-            document.location.href = 'registrasi.php';
+            document.location.href = 'registrasi1.php';
         </script>
         ";
     }

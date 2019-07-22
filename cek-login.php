@@ -27,7 +27,7 @@
             $_SESSION['login'] = true;
             $_SESSION['user'] = $username;
             // alihkan ke halaman dashboard admin
-            header("location:tampil.php");
+            header("location:dashboard.php");
         
             // cek jika user login sebagai siswa
             }else if($row['user']=="SISWA"){
@@ -36,7 +36,7 @@
             $_SESSION['login'] = true;
             $_SESSION['user'] = $username;
             // alihkan ke halaman dashboard pegawai
-            header("location:siswa.php");
+            header("location:siswa2.php");
 
             }else{
         

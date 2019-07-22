@@ -83,7 +83,7 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="simpan" id="simpan" class="form-submit" value="Simpan"/>
-                                <a href = "siswa.php" class="form-submit btn-danger">Keluar</a>
+                                <a href = "siswa2.php" class="form-submit btn-danger">Keluar</a>
                             </div>
                         </form>
                     </div>

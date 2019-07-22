@@ -58,12 +58,12 @@
                          <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />   
                         
                             <div class="form-group">
-                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <label for="username"><i class="zmdi zmdi-email-open"></i></label>
                                 <input type="text" name="pesan" placeholder="Username anda" value="<?php echo $siswa['pesan'] ?>" />
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="simpan" id="simpan" class="form-submit" value="Simpan"/>
-                                <a href = "siswa.php" class="form-submit btn-danger">Keluar</a>
+                                <a href = "data-feedback-siswa.php" class="form-submit btn-danger">Keluar</a>
                             </div>
                         </form>
                     </div>
