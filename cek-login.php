@@ -36,7 +36,7 @@
             $_SESSION['login'] = true;
             $_SESSION['user'] = $username;
             // alihkan ke halaman dashboard pegawai
-            header("location:siswa2.php");
+            header("location:dashboard-siswa.php");
 
             }else{
         

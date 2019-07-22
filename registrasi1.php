@@ -137,10 +137,10 @@
                 <!-- Menu Footer-->
                 <li class="user-footer">
                     <div class="pull-left">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                        <a href="files/<?php echo $admin['upload'];?>" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                    <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
+                        <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                 </li>
                 </ul>
@@ -189,7 +189,7 @@
                 <li class="active"><a href="dashboard.php"><i class="fa fa-circle-o"></i>Menu</a></li>
             </ul>
             </li>
-            <li class="treeview">
+            <li class="active treeview">
             <a href="#">
                 <i class="fa fa-address-card"></i> <span>Data Registrasi</span>
                 <span class="pull-right-container">
@@ -198,10 +198,10 @@
             </a>
             <ul class="treeview-menu">
                 <li class="active"><a href="tampil.php"><i class="fa fa-circle-o"></i>Data Siswa</a></li>
-                <li class="active"><a href="registrasi.php"><i class="fa fa-circle-o"></i>Tambah Data</a></li>
+                <li class="active"><a href="registrasi1.php"><i class="fa fa-circle-o"></i>Tambah Data</a></li>
             </ul>
             </li>
-            <li class="active treeview">
+            <li class=" treeview">
             <a href="#">
                 <i class="fa fa-envelope-open"></i> <span>Feedback</span>
                 <span class="pull-right-container">
