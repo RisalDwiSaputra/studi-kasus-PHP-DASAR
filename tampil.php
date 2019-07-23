@@ -101,34 +101,24 @@
 
                     <p>
                         <?php echo $admin['nama'];?>
-                        <small>Admin since July. 2019</small>
+                        <small>Admin <?php echo date('l, Y');?></small>
                     </p>
-                </li>
-                <!-- Menu Body -->
-                <li class="user-body">
-                    <div class="row">
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Friends</a>
-                    </div>
-                    </div>
-                    <!-- /.row -->
                 </li>
                 <!-- Menu Footer-->
                 <li class="user-footer">
+                    <?php
+                        $sql = "SELECT * FROM admin";
+                        $query = mysqli_query($db, $sql);
+
+                        $profile = mysqli_fetch_assoc($query);
+                    ?>
                     <div class="pull-left">
-                        <a href="files/<?php echo $admin['upload'];?>" class="btn btn-default btn-flat">Profile</a>
+                        <a href="edit-reg.php?id=<?php echo $profile['id']; ?>" class="btn btn-default btn-flat">Edit Profile</a>
                     </div>
                     <div class="pull-right">
-                        <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                 </li>
-                </ul>
             </li>
             <!-- Control Sidebar Toggle Button -->
             </ul>

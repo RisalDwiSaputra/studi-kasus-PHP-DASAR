@@ -136,23 +136,29 @@
                 </li>
                 <!-- Menu Body -->
                 <li class="user-body">
-                    <div class="row">
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Friends</a>
-                    </div>
-                    </div>
-                    <!-- /.row -->
+                <?php
+                $sql = "SELECT admin.id AS id_admin, admin.username, admin.password, admin.nama, admin.nomer_telfon, admin.alamat, admin.email, admin.user, 
+                        feedback.id AS id_feedback, feedback.id_siswa, feedback.pesan
+                        FROM admin 
+                        INNER JOIN feedback ON admin.id = feedback.id_siswa 
+                        WHERE admin.username = '$_SESSION[user]'";
+                $query = mysqli_query($db, $sql) or die (mysqli_error($db));
+
+                $fb = mysqli_fetch_assoc($query);
+                ?>
+
+                <p align = "center">Feedback Anda : <?php echo mysqli_num_rows($query) ?></p>
                 </li>
                 <!-- Menu Footer-->
                 <li class="user-footer">
+                    <?php
+                        $sql = "SELECT * FROM admin where username = '$_SESSION[user]'";
+                        $query = mysqli_query($db, $sql);
+
+                        $profile = mysqli_fetch_assoc($query);
+                    ?>
                     <div class="pull-left">
-                        <a href="files/<?php echo $admin['upload'];?>" class="btn btn-default btn-flat">Profile</a>
+                        <a href="edit-siswa.php?id=<?php echo $profile['id']; ?>" class="btn btn-default btn-flat">Edit Profile</a>
                     </div>
                     <div class="pull-right">
                         <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
@@ -175,8 +181,8 @@
             <img src="files/<?php echo $admin['upload'];?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-            <p><?php echo $admin['nama'];?></p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <p style="color:white"><?php echo $admin['nama'];?></p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
         <!-- search form -->
@@ -230,7 +236,7 @@
                 <div class="container">
                     <div class="signup-content">
                         <div class="signup-form">
-                        <h2 class="form-title">Keluahan Siswa</h2>
+                        <h2 class="form-title">Feedback Siswa</h2>
                         <!-- menampilkan id siswa -->
                         <?php
                             $sql = "SELECT * FROM admin where username = '$_SESSION[user]'";

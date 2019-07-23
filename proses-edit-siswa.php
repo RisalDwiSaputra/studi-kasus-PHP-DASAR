@@ -75,7 +75,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
     }else{
       // Jika Gagal, Lakukan :
       echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
-      echo "<br><a href='siswa.php'>Kembali Ke Form</a>";
+      echo "<br><a href='siswa2.php'>Kembali Ke Form</a>";
     }
 }
 

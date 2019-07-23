@@ -1,7 +1,7 @@
 <?php
     session_start();
     require "koneksi.php";
-        
+
     if( !isset($_SESSION['login']) ){
         header("location: login.php");
         exit;
@@ -67,7 +67,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
             <?php
-                $sql = "SELECT * FROM admin where username = '$_SESSION[user]'";
+                $sql = "SELECT * FROM admin where username = '$_SESSION[user]' ";
                 $query = mysqli_query($db, $sql);
 
                 $ambil = mysqli_fetch_assoc($query);
@@ -109,23 +109,29 @@
                 </li>
                 <!-- Menu Body -->
                 <li class="user-body">
-                    <div class="row">
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                        <a href="#">Friends</a>
-                    </div>
-                    </div>
-                    <!-- /.row -->
+                <?php
+                $sql = "SELECT admin.id AS id_admin, admin.username, admin.password, admin.nama, admin.nomer_telfon, admin.alamat, admin.email, admin.user, 
+                        feedback.id AS id_feedback, feedback.id_siswa, feedback.pesan
+                        FROM admin 
+                        INNER JOIN feedback ON admin.id = feedback.id_siswa 
+                        WHERE admin.username = '$_SESSION[user]'";
+                $query = mysqli_query($db, $sql) or die (mysqli_error($db));
+
+                $fb = mysqli_fetch_assoc($query);
+                ?>
+
+                <p align = "center">Feedback Anda : <?php echo mysqli_num_rows($query) ?></p>
                 </li>
                 <!-- Menu Footer-->
                 <li class="user-footer">
+                    <?php
+                        $sql = "SELECT * FROM admin where username = '$_SESSION[user]'";
+                        $query = mysqli_query($db, $sql);
+
+                        $profile = mysqli_fetch_assoc($query);
+                    ?>
                     <div class="pull-left">
-                        <a href="files/<?php echo $ambil['upload'];?>" class="btn btn-default btn-flat">Profile</a>
+                        <a href="edit-siswa.php?id=<?php echo $profile['id']; ?>" class="btn btn-default btn-flat">Edit Profile</a>
                     </div>
                     <div class="pull-right">
                     <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
