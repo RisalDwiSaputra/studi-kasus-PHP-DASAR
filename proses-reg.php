@@ -6,7 +6,7 @@ require 'koneksi.php';
 if(isset($_POST['daftar'])){
 
     // ambil data dari formulir
-    $username = strtolower(stripslashes($_POST['username']));
+    $username = strtolower($_POST['username']);
     $password = $_POST['password'];
 
     $nama_file = $_FILES['upload']['name'];

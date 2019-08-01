@@ -10,7 +10,7 @@
 
         // die (mysqli_error($db)
         // cara melihat error mysqli
-        $query = mysqli_query($db, "SELECT * FROM admin WHERE username = '$username' AND password = '$password'") or die (mysqli_error($db));
+        $query = mysqli_query($db, "SELECT * FROM admin WHERE username = '$username' AND password = '$password' ") or die (mysqli_error($db));
 
 
         // cek username dan password ditemukan di database
@@ -35,7 +35,7 @@
             // buat session login dan username
             $_SESSION['login'] = true;
             $_SESSION['user'] = $username;
-            // alihkan ke halaman dashboard pegawai
+            // alihkan ke halaman dashboard siswa
             header("location:dashboard-siswa.php");
 
             }else{
