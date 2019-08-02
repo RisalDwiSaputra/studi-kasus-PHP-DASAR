@@ -175,27 +175,34 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>Nama</th>
                             <th>Pesan</th>
+                            <th>Tindakan</th>
                           </tr>
                         </thead>
 
                         <tbody>
                             <tr>
                             <?php
-                            $sql = "SELECT * FROM feedback INNER JOIN admin ON feedback.id_siswa = admin.id where username='$_SESSION[user]' ";
-                            $query = mysqli_query($db, $sql);
+                            $sql = "SELECT admin.id AS id_admin, admin.username, admin.password, admin.nama, admin.nomer_telfon, admin.alamat, admin.email, admin.user, 
+                                    feedback.id AS id_feedback, feedback.id_siswa, feedback.pesan
+                                    FROM admin 
+                                    INNER JOIN feedback ON admin.id = feedback.id_siswa 
+                                    WHERE admin.username = '$_SESSION[user]'";
+                            $query = mysqli_query($db, $sql) or die (mysqli_error($db));
 
-                            while($admin = mysqli_fetch_array($query)){
-                            ?>
-                            <tr>
-                                <td><?php echo $admin['nama'];?></td>
-                                <td><?php echo $admin['pesan'];?></td>
+                            while($feedback = mysqli_fetch_array($query, MYSQLI_ASSOC)){
+                            ?>    
+                                    <td><?php echo $feedback['pesan'];?></td>
+                                    <td>
+                                    <a href = "edit-fed.php?id=<?php echo $feedback['id_feedback'];?>"
+                                        class = "btn btn-warning">Edit</a>
+                                    <a href= "hapus-fed.php?id=<?php echo $feedback['id_feedback'];?>"  
+                                        class = "btn btn-danger">Hapus</a>
+                                    </td>
                             </tr>
-                                <?php
-                                }
-                                ?>
-                            </tr>
+                              <?php
+                              }
+                              ?>
                         </tbody>
                       </table>
                     </div>
