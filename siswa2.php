@@ -202,8 +202,6 @@
                                 <td>
                                 <a href = "edit-siswa.php?id=<?php echo $admin['id'];?>"
                                     class = "btn btn-warning">Edit</a>
-                                <a href= "hapus-reg.php?id=<?php echo $admin['id'];?>"  
-                                    class = "btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                                 <?php
