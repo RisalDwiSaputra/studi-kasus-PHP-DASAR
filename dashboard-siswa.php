@@ -201,7 +201,7 @@
                     
                     <p class="message" style="font-size:17px;">
                     
-                    <img src="files/<?php echo $feedback['upload']; ?>" alt="user image" widht="50" height="50" style="border-radius:10px;">
+                    <img src="files/<?php echo $feedback['upload']; ?>" widht="50" height="50" style="border-radius:10px;">
                     
                     <a href="#" class="name">
                         <small class="text-muted pull-right"><i class="fa fa-calendar"></i>  <?php echo date('Y-m-d'); ?> </small>

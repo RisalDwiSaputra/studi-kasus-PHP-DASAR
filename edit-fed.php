@@ -65,6 +65,9 @@
             padding: 0px;
         }
     </style>
+
+    <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script> 
   </head>
 
   <body class="nav-md">
@@ -190,8 +193,8 @@
                         <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />    
 
                         <div class="form-group">
-                            <label for="pesan" class="col-md-3 col-sm-3 col-xs-12">Pesan</label>
-                            <input type="text" class="form-control col-md-7 col-xs-12" name="pesan" placeholder="pesan lengkap" value="<?php echo $siswa['pesan'] ?>" />
+                            <label for="pesan" ><b>Pesan :</b></label>
+                            <textarea name="pesan"><?php echo $siswa['pesan'] ?></textarea>
                         </div>
 
                       <div class="ln_solid"></div>

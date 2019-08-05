@@ -49,6 +49,10 @@
             padding: 0px;
         }
     </style>
+
+  <script src="tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script> 
+ 
   </head>
 
   <body class="nav-md">
@@ -183,15 +187,16 @@
                       <input type="hidden" value="<?php echo $ambil['id']; ?>" name="id_siswa">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="pesan">Pesan Anda</span>
+                        <label for="pesan">Pesan Anda</span>
                         </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="pesan" required="required" class="form-control col-md-7 col-xs-12">
+                        <div>
+                          <textarea name="pesan" cols="30" rows="10"></textarea>
+                          <!-- <input type="text" name="pesan" required="required" class="form-control col-md-7 col-xs-12"> -->
                         </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                        <div>
                           <a href="siswa2.php">
                           <button class="btn btn-danger" type="button">Batal</button>
                           </a>
