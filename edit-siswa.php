@@ -85,7 +85,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="files/<?php echo $ambil['upload'];?>" alt="..." class="img-circle profile_img">
+                <img src="files/<?php echo $ambil['upload'];?>" alt="..." class="img-circle profile_img" widht="50" height="50">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
