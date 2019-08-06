@@ -123,7 +123,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="logout.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -191,12 +191,12 @@
                         </label>
                         <div>
                           <textarea name="pesan" cols="30" rows="10"></textarea>
-                          <!-- <input type="text" name="pesan" required="required" class="form-control col-md-7 col-xs-12"> -->
+                          
                         </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div>
+                        <div >
                           <a href="siswa2.php">
                           <button class="btn btn-danger" type="button">Batal</button>
                           </a>
