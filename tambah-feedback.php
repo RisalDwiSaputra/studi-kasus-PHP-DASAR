@@ -36,7 +36,7 @@
     <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="build/css/custom.css" rel="stylesheet">
     <style>
     .img-circle.profile_img {
             width: 70%;
@@ -51,7 +51,15 @@
     </style>
 
   <script src="tinymce/js/tinymce/tinymce.min.js"></script>
-  <script>tinymce.init({ selector:'textarea' });</script> 
+  <script>tinymce.init({ 
+          selector:'textarea',
+          plugins: [
+            'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            'searchreplace wordcount visualblocks visualchars code fullscreen',
+            'insertdatetime media nonbreaking save table contextmenu directionality',
+            'emoticons template paste textcolor colorpicker textpattern imagetools'
+          ],
+          });</script> 
  
   </head>
 

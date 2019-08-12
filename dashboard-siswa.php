@@ -36,7 +36,7 @@
     <link href="vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="build/css/custom.css" rel="stylesheet">
 
     <style>
     .img-circle.profile_img {
@@ -61,7 +61,7 @@
     ?>
     <div class="container body" style="background:#fff">
       <div class="main_container">
-        <div class="col-md-3 left_col">
+        <div class="col-md-3 left_col fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="index.html" class="site_title"><i class="fa fa-graduation-cap" aria-hidden="true"></i> <span><?php echo $ambil['nama'];?>!</span></a>
