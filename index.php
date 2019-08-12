@@ -36,8 +36,8 @@
         height: 250px;  
     }
       header.siswa2{
-        background-image:url("images/ws.jpg");
-       
+        background-image:url("images/ws2.jpg");
+        -webkit-filter:saturate(90%);
     }
   </style>
 
