@@ -191,7 +191,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="nomer_telfon" class="control-label col-md-3 col-sm-3 col-xs-12">Nomer Telfon</label>
+                        <label for="nomer_telfon" class="control-label col-md-3 col-sm-3 col-xs-12">Nomor Telepon</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="nomer_telfon" class="form-control col-md-7 col-xs-12" type="number" name="nomer_telfon">
                         </div>
