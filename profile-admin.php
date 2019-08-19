@@ -115,7 +115,7 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="logout.php" style="padding-right:100%;">
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="logout.php" style="padding-right:100%;">
                 <span class="glyphicon glyphicon-off" aria-hidden="true" style="padding-left:100px;"></span>
               </a>
             </div>

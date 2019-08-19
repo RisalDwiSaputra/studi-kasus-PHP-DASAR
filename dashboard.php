@@ -162,7 +162,7 @@
           <!-- top tiles -->
           <div class="row tile_count">
             <div class="col-xs-6 tile_stats_count" align="center">
-              <span class="count_top"><i class="fa fa-user"></i> Data Registrasi</span>
+              <span class="count_top" style="padding-right:10px;"><i class="fa fa-user" style="padding-right:5px;"></i> Data Registrasi</span>
               <div class="count"><?php echo mysqli_num_rows($query) ?></div>
             </div>
             <div class="col-xs-6 tile_stats_count" align="center">
@@ -172,7 +172,7 @@
 
                 $fb = mysqli_fetch_assoc($query);
             ?>
-              <span class="count_top"><i class="fa fa-envelope"></i> Data Feedback</span>
+              <span class="count_top" style="padding-right:10px;"><i class="fa fa-envelope"  style="padding-right:5px;"></i> Data Feedback</span>
               <div class="count"><?php echo mysqli_num_rows($qr) ?></div>
               </div>
           </div>
@@ -181,7 +181,7 @@
           <div class="row">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Feedback Yang Masuk Hari Ini :</h2>
+                    <h4>Feedback Yang Masuk Hari Ini :</h4>
                     <div class="clearfix"></div>
                   </div>
                     <?php

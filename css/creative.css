@@ -201,6 +201,7 @@ pre {
 
 figure {
   margin: 0 0 1rem;
+  height:120px;
 }
 
 img {
@@ -487,7 +488,7 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -4452,6 +4453,7 @@ input[type="button"].btn-block {
   line-height: inherit;
   white-space: nowrap;
 }
+
 
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
@@ -10362,7 +10364,7 @@ button.bg-dark:focus {
 }
 
 .text-white {
-  color: #fff !important;
+  color: lawngreen !important;
 }
 
 .text-primary {
@@ -10561,7 +10563,7 @@ html {
 }
 
 .text-white-75 {
-  color: rgba(255, 255, 255, 0.75);
+  color: lightsteelblue;
 }
 
 hr.divider {
@@ -10705,6 +10707,9 @@ header.masthead h1 {
 #portfolio .container-fluid .portfolio-box {
   position: relative;
   display: block;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
 }
 
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption {

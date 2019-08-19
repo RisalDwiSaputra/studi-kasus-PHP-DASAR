@@ -28,17 +28,113 @@
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
   <!-- Theme CSS - Includes Bootstrap -->
-  <link href="css/creative.min.css" rel="stylesheet">
+  <link href="css/creative.css" rel="stylesheet">
 
   <style>
+      figure{
+        height:120px;
+      }    
+      .navbar-brand img{
+          height:auto;
+      }
+      .signin-image img{
+         height:auto;
+      }
       .img-fluid{
         width: 450px;
         height: 250px;  
     }
       header.siswa2{
-        background-image:url("images/ws2.jpg");
-        -webkit-filter:saturate(90%);
+        padding-top: 10rem;
+        padding-bottom: calc(10rem - 72px);
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.8)), to(rgba(92, 77, 66, 0.8))), url("images/wes32.jpg");
+        background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("images/wes32.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
     }
+    .text-white-75 {
+      color: white;
+    }
+    @media screen and (min-width:1440px){
+      #portfolio .container-fluid{
+        max-width:none;
+      }
+      .img-fluid{
+        width:100%;
+        height:100%;
+      }
+      .jurusan-section .container, .services-section .container, .contact-section .container{
+        margin:0 auto;
+      }
+
+    }
+
+    .page-section {
+      padding: 8rem 0;
+      padding-top:80px;
+    }
+    .jurusan-img{
+      width:100px;
+      height: auto;
+    }
+
+    @media screen and (min-width:991px){
+      #jrsn{
+        padding:90px;
+        margin-left:-70px;
+        width:100%;
+      }
+      #contact{
+        margin-left:-10px;
+        width:100%;
+      }
+    }
+    @media screen and (min-width:320px){
+        #jrsn{
+          padding-top: inherit;
+          padding-left:-50px;
+        }
+        #gambar{
+          margin-left: -32px;
+          padding-left: 40px;
+        }
+        .portfolio-box-caption{
+          padding-left:100px;
+        }
+    }
+    @media screen and (min-width:375px){
+        #jrsn{
+          padding-top: inherit;
+          padding-left:-50px;
+        }
+        #pl3{
+          padding-left:30px;
+        }
+        #gambar{
+          padding-left: 40px;
+        }
+    }
+    @media screen and (min-width:1024px){
+        #jrsn{
+          margin-left:-35px;
+        }
+         #pl {
+          margin-left: 10px;
+        }
+        #img{
+          margin-left: -7px;
+        }
+        #pl2 {
+          margin-left: 5px;
+        }
+        #pl3 {
+          margin-left: -5px;
+        }
+
+    }
+
   </style>
 
 </head>
@@ -48,23 +144,23 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
     <div class="container">
-      	<a class="navbar-brand js-scroll-trigger" href="#page-top" style="color:black;">SMKN 1 PROBOLINGGO</a>
+      	<a class="navbar-brand js-scroll-trigger" href="#page-top" style="color:black;"><img src="images/smk.jpg" alt="sing up image" height="60" width="80"></a>
       	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#jurusan" style="color:black;">Jurusan </a>
+            <a class="nav-link js-scroll-trigger" href="#jurusan" style="color:#rgb(29, 251, 255) ;">Jurusan </a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio" style="color:black;">Ekstra Kurikuler</a>
+            <a class="nav-link js-scroll-trigger" href="#portfolio" style="color:#rgb(29, 251, 255) ;">Ekstra Kurikuler</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services" style="color:black;">Layanan</a>
+            <a class="nav-link js-scroll-trigger" href="#services" style="color:#rgb(29, 251, 255) ;">Layanan</a>
           </li> 
           <li class="nav-item">   
-            <a class="nav-link js-scroll-trigger" href="#contact" style="color:black;">Kontak</a>
+            <a class="nav-link js-scroll-trigger" href="#contact" style="color:#rgb(29, 251, 255) ;">Kontak</a>
           </li>
         </ul>
       </div>
@@ -76,11 +172,11 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center justify-content-center text-center">
         <div class="col-lg-10 align-self-end">
-          <h1 class="text-uppercase text-white font-weight-bold">SELAMAT DATANG <br> SMKN 1 PROBOLINGGO</h1>
+          <h1 class="text-uppercase text-white font-weight-bold">SELAMAT DATANG<br> SMKN 1 PROBOLINGGO</h1>
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
-          <p class="text-white-75 font-weight-light mb-5">Sekolah Menengah Kejuruan (SMK) adalah salah satu bentuk satuan pendidikan formal yang menyelenggarakan pendidikan kejuruan pada jenjang pendidikan menengah sebagai lanjutan dari SMP/MTs!</p>
+          <p class="text-white-75 font-weight mb-5">Sekolah Menengah Kejuruan (SMK) adalah salah satu bentuk satuan pendidikan formal yang menyelenggarakan pendidikan kejuruan pada jenjang pendidikan menengah sebagai lanjutan dari SMP/MTs!</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="login.php">Masuk</a>
         </div>
       </div>
@@ -88,50 +184,50 @@
   </header>
 
 <!-- Jurusan Section -->
-<section class="page-section" id="jurusan">
-    <div class="container">
+<section class="page-section jurusan-section" id="jurusan">
+    <div class="container" >
       <h2 class="text-center mt-0">Jurusan</h2>
       <hr class="divider my-4">
-      <div class="row">
+      <div class="row" id="jrsn">
         <div class="col-lg-2 col-md-6 text-center">
           <div class="mt-5">
-            <figure><img src="images/rpl.png" alt="sing up image" height="80" width="100"></figure>
+            <figure><img src="images/rpl.png" alt="sing up image" height="80" width="100" class="jurusan-img"></figure>
             <h3 class="h4 mb-2">RPL</h3>
             <p class="text-muted mb-0">Rekayasa Perangkat Lunak</p>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 text-center">
           <div class="mt-5">
-            <figure><img src="images/pbk.jpg" alt="sing up image" height="80" width="100"></figure>
+            <figure><img src="images/pbk.jpg" alt="sing up image" height="80" width="100" class="jurusan-img"></figure>
             <h3 class="h4 mb-2">PBK</h3>
             <p class="text-muted mb-0">Perbankan</p>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 text-center">
           <div class="mt-5">
-            <figure><img src="images/ap.jpg" alt="sing up image" height="80" width="100"></figure>
+            <figure><img src="images/ap.jpg" alt="sing up image" height="80" width="100" class="jurusan-img"></figure>
             <h3 class="h4 mb-2">AP</h3>
             <p class="text-muted mb-0">Perkantoran</p>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 text-center">
           <div class="mt-5">
-            <figure><img src="images/pm.gif" alt="sing up image" height="80" width="100"></figure>
+            <figure><img src="images/pm.gif" alt="sing up image" height="80" width="100" class="jurusan-img"></figure>
             <h3 class="h4 mb-2">PM</h3>
             <p class="text-muted mb-0">Pemasaran</p>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 text-center">
           <div class="mt-5">
-            <figure><img src="images/ak.jpg" alt="sing up image" height="80" width="100"></figure>
+            <figure><img src="images/ak.jpg" alt="sing up image" height="80" width="100" class="jurusan-img"></figure>
             <h3 class="h4 mb-2">AK</h3>
             <p class="text-muted mb-0">Akuntansi</p>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 text-center">
-          <div class="mt-4">
-                <div class="signin-image">
-                  <figure><img src="images/smk1.jpg" alt="sing up image" height="200" width="250"></figure>
+          <div class="mt-5 " id="gambar">
+                <div class="signin-image" id="gg">
+                  <figure ><img src="images/smk.jpg" alt="sing up image" height="200" width="250" class="jurusan-img"></figure>
                 </div>
           </div>
         </div>
@@ -141,7 +237,7 @@
 
   <!-- Ekstra Section -->
   <section id="portfolio" style="padding:50px;">
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" id="pl">
       <div class="row no-gutters">
         <div class="col-lg-4 col-sm-6">
           <a class="portfolio-box" href="images/band.jpg">
@@ -226,7 +322,7 @@
   </section>
   
   <!-- Services Section -->
-  <section class="page-section" id="services">
+  <section class="page-section services-section" id="services">
     <div class="container">
       <h2 class="text-center mt-0">Layanan</h2>
       <hr class="divider my-4">
@@ -253,9 +349,9 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-4">
+          <div class="mt-5">
                 <div class="signin-image">
-                  <figure><img src="images/smk1.jpg" alt="sing up image" height="200" width="250"></figure>
+                  <figure><img src="images/smk.jpg" alt="sing up image" height="200" width="240" class="jurusan-img"></figure>
                 </div>
           </div>
         </div>
@@ -264,7 +360,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="page-section bg-dark" id="contact">
+  <section class="page-section bg-dark contact-section" id="contact">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -274,18 +370,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 ml-auto text-center">
-          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div style="color:white;">Telp : (0335) 421121</div>
+        <div class="col-lg-4 ml-auto text-center" style="margin-top:20px;">
+          <i class="fas fa-phone fa-2x text-muted"></i>
+          <div style="color:white; margin:1px; margin-top:15px;" >Telp : (0335) 421121</div>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+        <div class="col-lg-4 mr-auto text-center" style="margin-top:20px;">
+          <i class="fas fa-envelope fa-2x text-muted"></i>
           <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:contact@yourwebsite.com">smkn1_probolinggo@yahoo.co.id</a>
+          <a class="d-block" href="smkn1_probolinggo@yahoo.co.id" style="margin-top:5px;">smkn1_probolinggo@yahoo.co.id</a>
         </div>
-        <div class="col-lg-4 ml-auto text-center">
-          <i class="fas fa-map fa-3x mb-3 text-muted"></i>
-          <div style="color:white;"> Jl. Mastrip 357 Kademangan Kota Probolinggo, Jrebeng Wetan, Kedopok, Probolinggo City, East Java 67239</div>
+        <div class="col-lg-4 ml-auto text-center" style="margin-top:20px;">
+          <i class="fas fa-map fa-2x text-muted"></i>
+          <div style="color:white; margin:1px; margin-top:10px;"> Jl. Mastrip 357 Kademangan Kota Probolinggo, Jrebeng Wetan, Kedopok, Probolinggo City, East Java 67239</div>
           <a class="d-block" href="http://smkn1probolinggo.sch.id/">http://smkn1probolinggo.sch.id/</a>
         </div>
       </div>      

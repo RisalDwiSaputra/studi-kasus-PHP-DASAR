@@ -15,7 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Login!</title>
+    <title>Login</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <link href="vendors/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="build/css/custom.css" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -48,10 +48,13 @@
       <a class="hiddenanchor" id="signin"></a>
 
       <div class="login_wrapper">
-        <div class="animate form login_form">
+        <div class="animate form login_form" style="padding-top:10%; padding-left:20px; padding-right:20px;">
           <section class="login_content">
+            <a href="index.php">
+              <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> SMKN 1 PROBOLINGGO</h1>
+            </a>
+            <h3>Form Login</h3>
             <form method="post" class="register-form" id="login-form" action="cek-login.php">
-              <h1>Login Form</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required=""  name="username"/>
               </div>
@@ -59,10 +62,7 @@
                 <input type="password" class="form-control" placeholder="Password" required="" name="password"/>
               </div>
               <div>
-                    <button type="submit" class="btn btn-success" name="login">Masuk</button>
-                    <a href="index.php">
-                        <button class="btn btn-danger" type="button">Batal</button>
-                    </a>
+                    <button type="submit" class="btn btn-success" name="login" style="padding-right:50px; padding-left:50px;">Masuk</button>
               </div>
 
               <div class="clearfix"></div>
@@ -72,8 +72,7 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i> SMKN 1 PROBOLINGGO</h1>
-                  <p>Risalsaputra : @copyright-2019 <b>SMK 1 Probolinggo</b></p>
+                  <p>Risalsaputra : @copyright-2019 <b>SMK 1 PROBOLINGGO</b></p>
                 </div>
               </div>
             </form>
